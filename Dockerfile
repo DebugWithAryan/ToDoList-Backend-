@@ -21,10 +21,11 @@ FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
-COPY --from = build /app/target/*.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
-ENV JAVA_OPTS = "-Xmx512m -Xms256m"
+ENV JAVA_OPTS="-Xmx512m -Xms256m"
 
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dserver.port=${PORT:-8080} -jar app.jar"]
+
