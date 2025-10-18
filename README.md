@@ -2,6 +2,16 @@
 
 A Spring Boot REST API for managing todo items with PostgreSQL database.
 
+---
+
+### 🎓 Preparing for Interviews or Exams?
+
+[![Interview Questions](https://img.shields.io/badge/📚_Interview_Questions-Click_Here-blue?style=for-the-badge)](./QUESTIONS.md)
+
+**Master the concepts behind this project!** We've prepared 40+ comprehensive questions covering Spring Boot, JPA, REST APIs, Docker, and more. Each question includes detailed answers with real examples from this codebase. Perfect for interview preparation! 🚀
+
+---
+
 ## Table of Contents
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
@@ -228,6 +238,23 @@ Open http://localhost:8080/api/todos
 ```
 
 You should see an empty array `[]` if no todos exist.
+
+## Live Deployment
+
+The application is deployed and accessible at:
+
+**Base URL:** `https://todoapp-en1q.onrender.com`
+
+**API Endpoint:** `https://todoapp-en1q.onrender.com/api/todos`
+
+You can test the live API directly without any local setup:
+
+```bash
+# Test live API
+curl https://todoapp-en1q.onrender.com/api/todos
+```
+
+Or open in browser: [https://todoapp-en1q.onrender.com/api/todos](https://todoapp-en1q.onrender.com/api/todos)
 
 ## Configuration
 
