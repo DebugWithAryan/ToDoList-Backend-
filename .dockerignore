@@ -1,0 +1,40 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.eclipse/
+.settings/
+.classpath
+.project
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (optional - remove if you want docs in image)
+*.md
+HELP.md
+
+# Test files (optional)
+src/test/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+
+# Maven cache
+.m2/
