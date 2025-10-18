@@ -23,15 +23,14 @@ public class DatabaseConfig {
                 throw new IllegalArgumentException("DATABASE_URL not found in environment variables");
             }
 
-            // Example format from Render: postgres://user:password@host:port/dbname
             URI dbUri = new URI(databaseUrl.replace("postgresql://", "postgres://"));
-
             String[] userInfo = dbUri.getUserInfo().split(":");
             String username = userInfo[0];
             String password = userInfo.length > 1 ? userInfo[1] : "";
 
+            int port = dbUri.getPort() == -1 ? 5432 : dbUri.getPort();  // ✅ default to 5432
             String jdbcUrl = String.format("jdbc:postgresql://%s:%d%s",
-                    dbUri.getHost(), dbUri.getPort(), dbUri.getPath());
+                    dbUri.getHost(), port, dbUri.getPath());
 
             System.out.println("✅ Successfully parsed DATABASE_URL");
             System.out.println("   JDBC URL: " + jdbcUrl);
