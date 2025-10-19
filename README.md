@@ -1,6 +1,7 @@
 # ToDoList Backend
 
-A Spring Boot REST API for managing todo items with PostgreSQL database.
+A Spring Boot REST API for managing todo items with PostgreSQL database. I will keep updating
+
 
 ---
 
